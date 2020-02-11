@@ -13,7 +13,8 @@ import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.util.Collector;
-import org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName;
+
+import java.util.HashMap;
 
 /**
  * Measure the time between submitting and scheduling each job in the cluster.
@@ -66,18 +67,20 @@ public class JobSchedulingLatency extends AppBase {
                     return false;
                 }
             }
-        });
+        }).keyBy(events.getId());
 
         DataStream<Tuple2<Long, Long>> jobIdWithLatency = filteredEvents.flatMap(new FlatMapFunction<JobEvent, Tuple2<Long, Long>>() {
+            HashMap<Long, Long> latency = new HashMap<>();
             @Override
             public void flatMap(JobEvent jobEvent, Collector<Tuple2<Long, Long>> collector) throws Exception {
-                if (jobEvent.eventType.getValue() == 0) {
-                    collector.collect(new Tuple2<>(jobEvent.jobId, jobEvent.timestamp));
+                if(!latency.containsKey(jobEvent.jobId)){
+                    latency.put(jobEvent.jobId, jobEvent.timestamp);
+                }else{
+                    Long time = jobEvent.timestamp - latency.get(jobEvent.jobId);
+                    collector.collect(new Tuple2<>(jobEvent.jobId,jobEvent.timestamp));
                 }
             }
         });
-        DataStream<Tuple2<Long, Long>> jobIdWithLatency =
-        jobIdWithLatency.keyBy(0).reduce();
 
         printOrTest(jobIdWithLatency);
         // execute the dataflow
