@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 
 public class MaxTaskCompletionTest extends TaskEventTestBase<TaskEvent> {
 
-	/**static Testable javaExercise = () -> MaxTaskCompletionTimeFromKafka.main(new String[]{});
+	static Testable javaExercise = () -> MaxTaskCompletionTimeFromKafka.main(new String[]{});
 
 	@Test
 	public void testMaxDurationPerPriority() throws Exception {
@@ -33,7 +33,7 @@ public class MaxTaskCompletionTest extends TaskEventTestBase<TaskEvent> {
 		TaskEvent c4 = testEvent(23, 9, 4, EventType.FINISH, 75); //p=4:12
 
 		TestTaskEventSource source = new TestTaskEventSource(a, b, a1, a2, b1, b2, a3, b3, a4, b4, c4);
-		assertEquals(Lists.newArrayList(new Tuple2<Integer, Long>(1, 1L),
+		 assertEquals(Lists.newArrayList(new Tuple2<Integer, Long>(1, 1L),
 				new Tuple2<Integer, Long>(3, 3L),
 				new Tuple2<Integer, Long>(1, 10L),
 				new Tuple2<Integer, Long>(1, 20L),
@@ -48,6 +48,6 @@ public class MaxTaskCompletionTest extends TaskEventTestBase<TaskEvent> {
 
 	protected List<?> results(TestTaskEventSource source) throws Exception {
 		return runApp(source, new TestSink<>(), javaExercise);
-	}**/
+	}
 
 }

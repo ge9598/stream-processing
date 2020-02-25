@@ -6,11 +6,12 @@ import clusterdata.utils.AppBase;
 import org.apache.flink.api.common.functions.FilterFunction;
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.common.functions.MapFunction;
-import org.apache.flink.api.common.functions.ReduceFunction;
+import org.apache.flink.api.java.tuple.Tuple;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.DataStream;
+import org.apache.flink.streaming.api.datastream.KeyedStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.util.Collector;
 
@@ -45,12 +46,12 @@ public class JobSchedulingLatency extends AppBase {
 
         // set the parallelism
         // TODO: check that your program works correctly with higher parallelism
-        env.setParallelism(8);
+        env.setParallelism(2);
 
         // start the data generator
         DataStream<JobEvent> events = env
                 .addSource(jobSourceOrTest(new JobEventSource(input, servingSpeedFactor)))
-                .setParallelism(1);
+                .setParallelism(1)                                                                                                                                         ;
 
         //TODO: implement the following transformations
         // Filter events and only keep submit and schedule
@@ -58,6 +59,8 @@ public class JobSchedulingLatency extends AppBase {
         // The results stream consists of tuple-2 records, where field 0 is the jobId and field 1 is the job duration
         // DataStream<Tuple2<Long, Long>> jobIdWithLatency = ...
         // printOrTest(jobIdWithLatency);
+
+        //filter the events to only want submit and schedule
         DataStream<JobEvent> filteredEvents = events.filter(new FilterFunction<JobEvent>() {
             @Override
             public boolean filter(JobEvent jobEvent) throws Exception {
@@ -67,17 +70,30 @@ public class JobSchedulingLatency extends AppBase {
                     return false;
                 }
             }
-        }).keyBy(events.getId());
+        });
 
-        DataStream<Tuple2<Long, Long>> jobIdWithLatency = filteredEvents.flatMap(new FlatMapFunction<JobEvent, Tuple2<Long, Long>>() {
-            HashMap<Long, Long> latency = new HashMap<>();
+        //key by job id
+        DataStream<JobEvent> keyedEvent= filteredEvents.keyBy("jobId");
+
+        //use flatmap and a hashmap to calculate the latency of each job
+        DataStream<Tuple2<Long, Long>> jobIdWithLatency = keyedEvent.flatMap(new FlatMapFunction<JobEvent, Tuple2<Long, Long>>() {
+            HashMap<Long, Tuple2<Long,Integer>> latency = new HashMap<>();
             @Override
             public void flatMap(JobEvent jobEvent, Collector<Tuple2<Long, Long>> collector) throws Exception {
+                // if there is no key yet, store it in the hashmap first, contains id as key, and a tuple 2 where has timestamp and eventType
                 if(!latency.containsKey(jobEvent.jobId)){
-                    latency.put(jobEvent.jobId, jobEvent.timestamp);
+                    latency.put(jobEvent.jobId, new Tuple2<Long, Integer>(jobEvent.timestamp, jobEvent.eventType.getValue()));
                 }else{
-                    Long time = jobEvent.timestamp - latency.get(jobEvent.jobId);
-                    collector.collect(new Tuple2<>(jobEvent.jobId,jobEvent.timestamp));
+                    //if there a key already, calculate the latency based on the eventype of current job event
+                    if(jobEvent.eventType.getValue() == 1 && latency.get(jobEvent.jobId).f1 == 0) {
+                        Long time = jobEvent.timestamp - latency.remove(jobEvent.jobId).f0;
+                        collector.collect(new Tuple2<Long, Long>(jobEvent.jobId,time));
+
+                    }
+                    else if(jobEvent.eventType.getValue() == 0 && latency.get(jobEvent.jobId).f1 == 1){
+                        Long time = latency.remove(jobEvent.jobId).f0 - jobEvent.timestamp;
+                        collector.collect(new Tuple2<Long, Long>(jobEvent.jobId,time));
+                    }
                 }
             }
         });

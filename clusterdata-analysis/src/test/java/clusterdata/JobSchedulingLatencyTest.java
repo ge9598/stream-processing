@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 
 public class JobSchedulingLatencyTest extends JobEventTestBase<JobEvent> {
 
-	/**static Testable javaExercise = () -> JobSchedulingLatency.main(new String[]{});
+	static Testable javaExercise = () -> JobSchedulingLatency.main(new String[]{});
 
 	@Test
 	public void testEventCount() throws Exception {
@@ -54,6 +54,6 @@ public class JobSchedulingLatencyTest extends JobEventTestBase<JobEvent> {
 
 	protected List<?> results(TestJobEventSource source) throws Exception {
 		return runApp(source, new TestSink<>(), javaExercise);
-	}**/
+	}
 
 }

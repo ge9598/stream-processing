@@ -40,7 +40,7 @@ public class FilterTaskEventsToKafka extends AppBase {
 
         // set the parallelism
         // TODO: check that your program works correctly with higher parallelism
-        env.setParallelism(8);
+        env.setParallelism(2);
 
         // start the data generator
         DataStream<TaskEvent> taskEvents = env
@@ -51,6 +51,8 @@ public class FilterTaskEventsToKafka extends AppBase {
         // DataStream<TaskEvent> filteredEvents = ...
         // write the filtered data to a Kafka sink
         // filteredEvents.addSink((SinkFunction<TaskEvent>) sinkOrTest(new FlinkKafkaProducer011<TaskEvent>(...)));
+
+        //filter the data to only select submit and finish jobs
         DataStream<TaskEvent> filteredEvents = taskEvents.filter(new FilterFunction<TaskEvent>() {
             @Override
             public boolean filter(TaskEvent taskEvent) throws Exception {
@@ -62,6 +64,7 @@ public class FilterTaskEventsToKafka extends AppBase {
             }
         });
         printOrTest(filteredEvents);
+        //initialize producer
         FlinkKafkaProducer011<TaskEvent> myProducer = new FlinkKafkaProducer011<TaskEvent>(
                 LOCAL_KAFKA_BROKER,            // broker list
                 FILTERED_TASKS_TOPIC,                  // target topic

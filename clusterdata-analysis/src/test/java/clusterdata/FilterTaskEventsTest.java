@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 
 public class FilterTaskEventsTest extends TaskEventTestBase<TaskEvent> {
 
-	/**static Testable javaExercise = () -> FilterTaskEventsToKafka.main(new String[]{});
+	static Testable javaExercise = () -> FilterTaskEventsToKafka.main(new String[]{});
 
 	@Test
 	public void testFilterEvents() throws Exception {
@@ -38,6 +38,6 @@ public class FilterTaskEventsTest extends TaskEventTestBase<TaskEvent> {
 
 	protected List<?> results(TestTaskEventSource source) throws Exception {
 		return runApp(source, new TestSink<>(), javaExercise);
-	}**/
+	}
 
 }
