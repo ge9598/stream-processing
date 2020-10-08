@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a8b67d06-decd-4e7b-9aac-2e0c07ea8f6e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../clusterdata-analysis-solutions/src/main/java/clusterdata/exercise1/FilterTaskEventsToKafka.java" beforeDir="false" afterPath="$PROJECT_DIR$/../clusterdata-analysis-solutions/src/main/java/clusterdata/exercise1/FilterTaskEventsToKafka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clusterdata-analysis-solutions/src/main/java/clusterdata/exercise1/JobEventCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../clusterdata-analysis-solutions/src/main/java/clusterdata/exercise1/JobEventCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clusterdata-analysis-solutions/src/main/java/clusterdata/sources/JobEventSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../clusterdata-analysis-solutions/src/main/java/clusterdata/sources/JobEventSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clusterdata-analysis-solutions/src/main/java/clusterdata/sources/TaskEventSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../clusterdata-analysis-solutions/src/main/java/clusterdata/sources/TaskEventSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clusterdata/exercise1/FilterTaskEventsToKafka.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clusterdata/exercise1/FilterTaskEventsToKafka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clusterdata/exercise1/JobEventCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clusterdata/exercise1/JobEventCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clusterdata/exercise1/JobSchedulingLatency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clusterdata/exercise1/JobSchedulingLatency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clusterdata/exercise1/MaxTaskCompletionTimeFromKafka.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clusterdata/exercise1/MaxTaskCompletionTimeFromKafka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clusterdata/sources/JobEventSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clusterdata/sources/JobEventSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clusterdata/sources/TaskEventSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clusterdata/sources/TaskEventSource.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="G:/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1W7rctsPVgHI3XMyOovZVDVuYDm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Assignment 3" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="clusterdata.datatypes" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="clusterdata" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="clusterdata" />
+      <recent name="clusterdata.testing" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/clusterdata" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.JobEventCount">
+    <configuration name="JobEventCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="clusterdata.exercise1.JobEventCount" />
+      <module name="clusterdata-analysis" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JobSchedulingLatency" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="clusterdata.exercise1.JobSchedulingLatency" />
+      <module name="clusterdata-analysis" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JobEventCountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clusterdata-analysis" />
+      <option name="PACKAGE_NAME" value="clusterdata" />
+      <option name="MAIN_CLASS_NAME" value="clusterdata.JobEventCountTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JobSchedulingLatencyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clusterdata-analysis" />
+      <option name="PACKAGE_NAME" value="clusterdata" />
+      <option name="MAIN_CLASS_NAME" value="clusterdata.JobSchedulingLatencyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaxTaskCompletionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clusterdata-analysis" />
+      <option name="PACKAGE_NAME" value="clusterdata" />
+      <option name="MAIN_CLASS_NAME" value="clusterdata.MaxTaskCompletionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.JobEventCount" />
+      <item itemvalue="Application.JobSchedulingLatency" />
+      <item itemvalue="JUnit.JobEventCountTest" />
+      <item itemvalue="JUnit.JobSchedulingLatencyTest" />
+      <item itemvalue="JUnit.MaxTaskCompletionTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JobEventCount" />
+        <item itemvalue="JUnit.MaxTaskCompletionTest" />
+        <item itemvalue="JUnit.JobSchedulingLatencyTest" />
+        <item itemvalue="JUnit.JobEventCountTest" />
+        <item itemvalue="Application.JobSchedulingLatency" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a8b67d06-decd-4e7b-9aac-2e0c07ea8f6e" name="Default Changelist" comment="" />
+      <created>1587521748222</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587521748222</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="555" y="198" width="800" height="684" key="#Project_Structure" timestamp="1580257411733">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state x="555" y="198" width="800" height="684" key="#Project_Structure/0.28.1920.1018@0.28.1920.1018" timestamp="1580257411733" />
+    <state x="418" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579042851517">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state x="418" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1920.1018@0.28.1920.1018" timestamp="1579042851517" />
+    <state x="768" y="247" width="374" height="586" key="#com.intellij.ide.util.MemberChooser" timestamp="1579212226345">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state x="768" y="247" width="374" height="586" key="#com.intellij.ide.util.MemberChooser/0.28.1920.1018@0.28.1920.1018" timestamp="1579212226345" />
+    <state x="804" y="429" width="301" height="223" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1580257322752">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state x="804" y="429" width="301" height="223" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.28.1920.1018@0.28.1920.1018" timestamp="1580257322752" />
+    <state x="723" y="393" width="474" height="307" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1579048845135">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state x="723" y="393" width="474" height="307" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.28.1920.1018@0.28.1920.1018" timestamp="1579048845135" />
+    <state x="693" y="285" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580257636151">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state x="693" y="285" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.28.1920.1018@0.28.1920.1018" timestamp="1580257636151" />
+    <state x="743" y="216" width="424" height="602" key="FileChooserDialogImpl" timestamp="1587528558496">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="743" y="216" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-109.1920.1040@0.0.1920.1040" timestamp="1587528558496" />
+    <state x="743" y="239" width="424" height="602" key="FileChooserDialogImpl/0.28.1920.1018@0.28.1920.1018" timestamp="1580322372637" />
+    <state width="1872" height="271" key="GridCell.Tab.0.bottom" timestamp="1580257068114">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state width="1872" height="271" key="GridCell.Tab.0.bottom/0.28.1920.1018@0.28.1920.1018" timestamp="1580257068114" />
+    <state width="1872" height="271" key="GridCell.Tab.0.center" timestamp="1580257068113">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state width="1872" height="271" key="GridCell.Tab.0.center/0.28.1920.1018@0.28.1920.1018" timestamp="1580257068113" />
+    <state width="1872" height="271" key="GridCell.Tab.0.left" timestamp="1580257068113">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state width="1872" height="271" key="GridCell.Tab.0.left/0.28.1920.1018@0.28.1920.1018" timestamp="1580257068113" />
+    <state width="1872" height="271" key="GridCell.Tab.0.right" timestamp="1580257068113">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state width="1872" height="271" key="GridCell.Tab.0.right/0.28.1920.1018@0.28.1920.1018" timestamp="1580257068113" />
+    <state width="1872" height="271" key="GridCell.Tab.1.bottom" timestamp="1580257068114">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state width="1872" height="271" key="GridCell.Tab.1.bottom/0.28.1920.1018@0.28.1920.1018" timestamp="1580257068114" />
+    <state width="1872" height="271" key="GridCell.Tab.1.center" timestamp="1580257068114">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state width="1872" height="271" key="GridCell.Tab.1.center/0.28.1920.1018@0.28.1920.1018" timestamp="1580257068114" />
+    <state width="1872" height="271" key="GridCell.Tab.1.left" timestamp="1580257068114">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state width="1872" height="271" key="GridCell.Tab.1.left/0.28.1920.1018@0.28.1920.1018" timestamp="1580257068114" />
+    <state width="1872" height="271" key="GridCell.Tab.1.right" timestamp="1580257068114">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state width="1872" height="271" key="GridCell.Tab.1.right/0.28.1920.1018@0.28.1920.1018" timestamp="1580257068114" />
+    <state x="626" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1580257582865">
+      <screen x="0" y="28" width="1920" height="1018" />
+    </state>
+    <state x="626" y="364" key="com.intellij.ide.util.TipDialog/0.28.1920.1018@0.28.1920.1018" timestamp="1580257582865" />
+  </component>
+</project>
