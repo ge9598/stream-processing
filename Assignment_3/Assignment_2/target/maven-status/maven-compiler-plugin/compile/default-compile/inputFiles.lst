@@ -1,0 +1,12 @@
+G:\K1\stream-processing\Assignment_2\src\main\java\clusterdata\exercise2\BusyMachines.java
+G:\K1\stream-processing\Assignment_2\src\main\java\clusterdata\exercise2\PerMachineTaskStatistics.java
+G:\K1\stream-processing\Assignment_2\src\main\java\clusterdata\datatypes\EventType.java
+G:\K1\stream-processing\Assignment_2\src\main\java\clusterdata\exercise2\GlobalTaskStatistics.java
+G:\K1\stream-processing\Assignment_2\src\main\java\clusterdata\utils\JobEventSchema.java
+G:\K1\stream-processing\Assignment_2\src\main\java\clusterdata\exercise2\LongestSessionPerJob.java
+G:\K1\stream-processing\Assignment_2\src\main\java\clusterdata\utils\TaskEventSchema.java
+G:\K1\stream-processing\Assignment_2\src\main\java\clusterdata\utils\AppBase.java
+G:\K1\stream-processing\Assignment_2\src\main\java\clusterdata\datatypes\JobEvent.java
+G:\K1\stream-processing\Assignment_2\src\main\java\clusterdata\datatypes\TaskEvent.java
+G:\K1\stream-processing\Assignment_2\src\main\java\clusterdata\sources\JobEventSource.java
+G:\K1\stream-processing\Assignment_2\src\main\java\clusterdata\sources\TaskEventSource.java
