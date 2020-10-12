@@ -1,0 +1,16 @@
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\exercise1\TimeBaseAnomaly.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\utils\AppBase.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\datatypes\EventType.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\exercise1\FilterTaskEventsToKafka.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\exercise1\JobSchedulingLatency.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\exercise1\JobEventCount.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\sources\JobEventSource.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\datatypes\TaskEvent.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\utils\TupleSchema.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\utils\JobEventSchema.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\exercise1\Invariantbasedanomaly.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\exercise1\MaxTaskCompletionTimeFromKafka.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\utils\TaskEventSchema.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\sources\TaskEventSource.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\datatypes\JobEvent.java
+G:\K1\Assignment_3\Assignment_1\src\main\java\clusterdata\exercise1\RuleBaseAnomaly.java
